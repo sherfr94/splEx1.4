@@ -5,7 +5,7 @@
 #include "../include/Files.h"
 #include <typeinfo>
 #include <algorithm>
-//#include "../include/Environment.h"
+#include "../include/Environment.h"
 
 // ... You may not change this file
 
@@ -45,7 +45,7 @@ int main(int , char **) {
         std::cout << (*it)->getName() << ' ';
     std::cout << d3.getAbsolutePath() << ' ';
     */
-
+/*
     Directory di1("di1", nullptr);
     File f1("b",1000);
     File f2("a",1500);
@@ -89,5 +89,37 @@ int main(int , char **) {
     for (std::vector<int>::iterator it=v2.begin(); it!=v2.end(); ++it)
         std::cout << ' ' << *it;
     std::cout << '\n';
+*/
+
+//    std::cout << "Test stoi: " << endl;
+//    std::cout << "==================" << endl;
+//    std::string str = "mkfile fr 200";
+//    int pos1=str.find(" ");
+//    std::string type=str.substr(0,pos1);
+//
+//    std::string namesize=str.substr(pos1+1);
+//    int pos2=namesize.find(" ");
+//    std::string name = namesize.substr(0,pos2+1);
+//
+//    std::string size=namesize.substr(pos2+1);
+//
+//
+//
+//    std::cout << pos1 << endl;
+//    std::cout << pos2 << endl;
+//    std::cout << str << endl;
+//    std::cout << type << endl;
+//    std::cout << "namesize: "+namesize << endl;
+//    std::cout << "name: "+name << endl;
+//
+//    std::cout << "size: "+size << endl;
+
+
+
+
+    std::cout << "Test Environment: " << endl;
+    std::cout << "==================" << endl;
+    Environment env;
+    env.start();
 
 }

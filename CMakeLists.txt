@@ -10,5 +10,6 @@ set(SOURCE_FILES
         src/FileSystem.cpp
         #src/Main.cpp
         src/Files.cpp
-        src/Test.cpp)
+        src/Test.cpp
+        )
 add_executable(splEx1_1 ${SOURCE_FILES})
