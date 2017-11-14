@@ -6,7 +6,8 @@
 BaseCommand::BaseCommand(string _args):args(_args) {}
 string BaseCommand::getArgs() { return args;}
 void BaseCommand::execute(FileSystem &fs) {}
-string BaseCommand::toString() {return "";}
+
+string BaseCommand::toString() {}
 
 PwdCommand::PwdCommand(string _args):BaseCommand(_args) {}
 void PwdCommand::execute(FileSystem &fs) {
