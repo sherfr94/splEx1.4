@@ -1,0 +1,34 @@
+#ifndef ENVIRONMENT_H_
+#define ENVIRONMENT_H_
+
+#include "Files.h"
+#include "Commands.h"
+
+#include <string>
+#include <vector>
+
+using namespace std;
+
+class Environment {
+private:
+	vector<BaseCommand*> commandsHistory;
+	FileSystem fs;
+
+public:
+	Environment();
+	void start();
+	FileSystem& getFileSystem() ; // Get a reference to the file system
+	void addToHistory(BaseCommand *command); // Add a new command to the history
+	const vector<BaseCommand*>& getHistory() const; // Return a reference to the history of commands
+    //RULE OF 5
+	void clear();
+	void copy(Environment& other);
+	virtual ~Environment();//Destructor
+	Environment(Environment &other);//Copy constructor
+	Environment& operator=(Environment& other);//Copy assignment
+	Environment& operator=(Environment&& other);//Move assignment
+	Environment(Environment &&other);//Move constructor
+
+};
+
+#endif
